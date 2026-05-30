@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Case 1</title>
+  <style>
+    body {
+      background: #003b6f;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      max-width: 95vw;
+      max-height: 95vh;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="scan" src="https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49ef0fd4_1.jpg">
+
+  <script>
+    const images = [
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49ef0fd4_1.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49f0b0a9_2.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49f0bcda_3.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49f0fbb4_4.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49f1069f_5.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49f110f7_6.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49f11bc4_7.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49f126d7_8.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc49f13231_9.jpg",
+      "https://radiologyassistant.nl/assets/pancreas-acute-pancreatitis-2-0/a54fcc4ac25e3a_10.jpg"
+    ];
+
+    let index = 0;
+    const scan = document.getElementById("scan");
+
+    document.addEventListener("wheel", function(event) {
+      if (event.deltaY > 0) {
+        index = Math.min(index + 1, images.length - 1);
+      } else {
+        index = Math.max(index - 1, 0);
+      }
+
+      scan.src = images[index];
+    });
+  </script>
+</body>
+</html>
