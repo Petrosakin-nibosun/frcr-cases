@@ -70,9 +70,11 @@
     cornerstone.enable(element);
 
     const imageIds = [];
-    for (let i = 1; i <= lastSlice; i++) {
-      imageIds.push('wadouri:http://localhost:8765/dicom/' + i);
-    }
+for (let i = 1; i <= lastSlice; i++) {
+    imageIds.push(
+        'wadouri:https://navigating-radiology-app.s3.ca-central-1.amazonaws.com/studies/9a5f5364-e1be-4454-ba85-c900723385d2/series/1613192914.169740336404451093356133193001420565877/' + i + '.dcm.gz'
+    );
+}
 
     function showSlice(n) {
       if (n < 1) n = 1;
