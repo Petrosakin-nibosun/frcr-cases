@@ -4,126 +4,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>FRCR Cases</title>
+<title>Case 3 - Pancreatitis</title>
 
 <style>
-* {
-    box-sizing: border-box;
+
+*{
+box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background: #111;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+body{
+margin:0;
+background:#111;
+color:white;
+font-family:Arial,Helvetica,sans-serif;
 }
 
-.container {
-    width: min(900px, calc(100% - 32px));
-    margin: 0 auto;
-    padding: 50px 0;
+.container{
+max-width:900px;
+margin:auto;
+padding:50px 20px;
 }
 
-h1 {
-    margin: 0 0 10px;
-    font-size: 42px;
+h1{
+font-size:42px;
+margin-bottom:8px;
 }
 
-.subtitle {
-    margin: 0 0 40px;
-    color: #aaa;
-    font-size: 18px;
+p{
+color:#aaa;
+margin-bottom:40px;
 }
 
-.case-list {
-    display: grid;
-    gap: 16px;
+.section{
+margin-bottom:40px;
 }
 
-.case-card {
-    display: block;
-    padding: 22px;
-    background: #252525;
-    border: 1px solid #444;
-    border-radius: 12px;
-    color: white;
-    text-decoration: none;
-    transition: background 0.15s ease, border-color 0.15s ease;
+.section h2{
+margin-bottom:15px;
+font-size:28px;
 }
 
-.case-card:hover {
-    background: #1f6feb;
-    border-color: #58a6ff;
+.viewer{
+display:block;
+padding:18px;
+margin-bottom:14px;
+background:#252525;
+border:1px solid #444;
+border-radius:10px;
+color:white;
+text-decoration:none;
+transition:.15s;
 }
 
-.case-title {
-    display: block;
-    margin-bottom: 7px;
-    font-size: 22px;
-    font-weight: bold;
+.viewer:hover{
+background:#1f6feb;
+border-color:#58a6ff;
 }
 
-.case-description {
-    display: block;
-    color: #bbb;
-    font-size: 16px;
+.viewer strong{
+display:block;
+font-size:22px;
+margin-bottom:6px;
 }
 
-.case-card:hover .case-description {
-    color: white;
+.viewer span{
+color:#bbb;
 }
 
-@media (max-width: 600px) {
-    .container {
-        padding-top: 30px;
-    }
-
-    h1 {
-        font-size: 34px;
-    }
-
-    .case-card {
-        padding: 18px;
-    }
-
-    .case-title {
-        font-size: 19px;
-    }
+.viewer:hover span{
+color:white;
 }
+
 </style>
+
 </head>
 
 <body>
 
-<main class="container">
+<div class="container">
 
-<h1>FRCR Cases</h1>
+<h1>Case 3</h1>
 
-<p class="subtitle">
-Choose a case to review.
-</p>
+<p>Select the series you want to review.</p>
 
-<div class="case-list">
+<div class="section">
 
-<a class="case-card" href="ctpa-case2-jpg/ctpa-case2.html">
-    <span class="case-title">Case 2 - Pulmonary Embolism</span>
-    <span class="case-description">Original single-window CTPA viewer</span>
+<h2>Arterial Phase</h2>
+
+<a class="viewer" href="Arterial%20Phase%20(Axial)/index.html">
+<strong>Axial</strong>
+<span>Soft tissue + selected windows</span>
 </a>
 
-<a class="case-card" href="ctpa-case2-multiwindow/index.html">
-    <span class="case-title">Case 2 - Pulmonary Embolism</span>
-    <span class="case-description">Axial multiwindow viewer</span>
+<a class="viewer" href="Arterial%20Phase%20(Coronal)/index.html">
+<strong>Coronal</strong>
+<span>Soft tissue + selected windows</span>
 </a>
 
-<a class="case-card" href="Case 3 - Pancreatitis - Assess for complication/">
-    <span class="case-title">Case 3 - Pancreatitis</span>
-    <span class="case-description">Assess for complication</span>
+<a class="viewer" href="Arterial%20Phase%20(Sagittal)/index.html">
+<strong>Sagittal</strong>
+<span>Soft tissue + selected windows</span>
 </a>
 
 </div>
 
-</main>
+<div class="section">
+
+<h2>Venous Phase</h2>
+
+<a class="viewer" href="Venous%20Phase%20(Axial)/index.html">
+<strong>Axial</strong>
+<span>Soft tissue + selected windows</span>
+</a>
+
+<a class="viewer" href="Venous%20Phase%20(Coronal)/index.html">
+<strong>Coronal</strong>
+<span>Soft tissue + selected windows</span>
+</a>
+
+<a class="viewer" href="Venous%20Phase%20(Sagittal)/index.html">
+<strong>Sagittal</strong>
+<span>Soft tissue + selected windows</span>
+</a>
+
+<a class="viewer" href="BONE%20Venous%20Phase%20(Sagittal)/index.html">
+<strong>Bone Window (Sagittal)</strong>
+<span>Bone reconstruction</span>
+</a>
+
+</div>
+
+</div>
 
 </body>
 </html>
